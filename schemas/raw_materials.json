@@ -1,0 +1,125 @@
+{
+  "name": "Raw Materials Compliance",
+  "description": "Comprehensive regulatory requirements for cosmetic/chemical raw materials",
+  "categories": {
+    "general_documents": {
+      "msds_english": {
+        "description": "English MSDS updated within last year",
+        "required": true,
+        "keywords": ["MSDS", "Material Safety Data Sheet", "safety data sheet"]
+      },
+      "msds_local": {
+        "description": "Local language MSDS updated within last year", 
+        "required": true,
+        "keywords": ["MSDS", "물질안전보건자료", "sicherheitsdatenblatt"]
+      },
+      "reach_declaration": {
+        "description": "REACH Declaration and registration number",
+        "required": true,
+        "keywords": ["REACH", "registration", "01-2119", "ECHA"]
+      },
+      "china_csar_compliance": {
+        "description": "Compliance to Chinese CSAR - Annex 14 and submission code",
+        "required": true,
+        "keywords": ["CSAR", "China", "Annex 14", "submission code"]
+      },
+      "tds_with_inci": {
+        "description": "Technical Data Sheet with INCI EU/CTFA/CHINA",
+        "required": true,
+        "keywords": ["TDS", "Technical Data Sheet", "INCI", "CTFA"]
+      },
+      "composition_breakdown": {
+        "description": "Detailed composition breakdown (%) with CAS and EINECS",
+        "required": true,
+        "keywords": ["composition", "CAS", "EINECS", "percentage", "%"]
+      },
+      "certificate_of_analysis": {
+        "description": "COA with manufacturing date, expiry date, shelf life",
+        "required": true,
+        "keywords": ["COA", "Certificate of Analysis", "manufacturing date", "expiry", "shelf life"]
+      },
+      "heavy_metals_content": {
+        "description": "Heavy metals content analysis",
+        "required": true,
+        "keywords": ["heavy metals", "lead", "mercury", "cadmium", "arsenic", "ppm"]
+      },
+      "cmr_free_declaration": {
+        "description": "CMR free declaration",
+        "required": true,
+        "keywords": ["CMR", "carcinogenic", "mutagenic", "reprotoxic", "free"]
+      },
+      "halal_status": {
+        "description": "Halal Status and Expiry Date",
+        "required": false,
+        "keywords": ["halal", "certified", "Islamic"]
+      },
+      "vegan_declaration": {
+        "description": "Vegan Declaration",
+        "required": false,
+        "keywords": ["vegan", "animal-free", "plant-based"]
+      }
+    },
+    "vegetable_biotech_origin": {
+      "bio_certificate": {
+        "description": "BIO certificate: Cosmos, Ecocert, Organic status",
+        "required": false,
+        "keywords": ["BIO", "Cosmos", "Ecocert", "organic", "certified"]
+      },
+      "rspo_status": {
+        "description": "RSPO Status: Mass Balance, Segregated or Identity Preserved",
+        "required": false,
+        "keywords": ["RSPO", "Mass Balance", "Segregated", "Identity Preserved", "palm"]
+      },
+      "gmo_free_declaration": {
+        "description": "GMO free declaration",
+        "required": false,
+        "keywords": ["GMO", "genetically modified", "free", "non-GMO"]
+      },
+      "pesticides_analysis": {
+        "description": "Pesticides analysis",
+        "required": false,
+        "keywords": ["pesticides", "residues", "analysis", "screening"]
+      }
+    },
+    "colorant_pearls": {
+      "nanomaterial_eu": {
+        "description": "Nanomaterial declaration according to EU regulation 1223/2009",
+        "required": false,
+        "keywords": ["nanomaterial", "nano", "EU 1223/2009", "particle size"]
+      },
+      "purity_statement": {
+        "description": "Purity statement for US, EU, JP and China regulations",
+        "required": false,
+        "keywords": ["purity", "statement", "compliance", "colorant"]
+      }
+    }
+  },
+  "examples": [
+    {
+      "text": "Material Safety Data Sheet\nProduct Name: Glycerin USP\nCAS Number: 56-81-5\nREACH Registration: 01-2119471987-18-0000\nHeavy Metals: <10ppm lead, <2ppm arsenic",
+      "extractions": [
+        {
+          "extraction_class": "requirement",
+          "extraction_text": "56-81-5",
+          "attributes": {
+            "name": "CAS Number",
+            "status": "present",
+            "value": "56-81-5",
+            "evidence": "CAS Number: 56-81-5"
+          }
+        }
+      ]
+    }
+  ],
+  "output_format": {
+    "type": "structured",
+    "extraction_class": "requirement",
+    "attributes_schema": {
+      "name": "string",
+      "status": "present|not_found|not_applicable",
+      "value": "string|null",
+      "evidence": "string",
+      "page_hint": "number|null"
+    }
+  }
+}

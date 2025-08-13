@@ -1,0 +1,62 @@
+{
+  "name": "Food Grade Materials",
+  "description": "Requirements for food-grade and food contact materials",
+  "categories": {
+    "food_safety": {
+      "fda_food_contact": {
+        "description": "FDA food contact substance approval",
+        "required": true,
+        "keywords": ["FDA", "food contact", "FCN", "21 CFR"]
+      },
+      "eu_food_contact": {
+        "description": "EU food contact regulation compliance",
+        "required": true,
+        "keywords": ["EU 10/2011", "food contact", "migration", "European"]
+      },
+      "heavy_metals_food": {
+        "description": "Heavy metals analysis for food applications",
+        "required": true,
+        "keywords": ["heavy metals", "lead", "cadmium", "food grade", "ppm"]
+      }
+    },
+    "certifications": {
+      "kosher": {
+        "description": "Kosher certification",
+        "required": false,
+        "keywords": ["kosher", "certified", "rabbi", "OU", "OK"]
+      },
+      "halal": {
+        "description": "Halal certification",
+        "required": false,
+        "keywords": ["halal", "certified", "Islamic"]
+      }
+    }
+  },
+  "examples": [
+    {
+      "text": "This material complies with FDA 21 CFR 175.300 for food contact applications. Heavy metals: Lead <0.1ppm.",
+      "extractions": [
+        {
+          "extraction_class": "requirement",
+          "extraction_text": "FDA 21 CFR 175.300",
+          "attributes": {
+            "name": "FDA Food Contact",
+            "status": "present",
+            "value": "21 CFR 175.300",
+            "evidence": "complies with FDA 21 CFR 175.300"
+          }
+        }
+      ]
+    }
+  ],
+  "output_format": {
+    "type": "structured",
+    "extraction_class": "requirement",
+    "attributes_schema": {
+      "name": "string",
+      "status": "present|not_found",
+      "value": "string|null",
+      "evidence": "string"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Basic Cosmetics Compliance",
+  "description": "Essential compliance requirements for cosmetic ingredients",
+  "categories": {
+    "safety": {
+      "msds": {
+        "description": "Material Safety Data Sheet",
+        "required": true,
+        "keywords": ["MSDS", "Material Safety Data Sheet", "safety"]
+      },
+      "allergens": {
+        "description": "Allergen declarations and content",
+        "required": true,
+        "keywords": ["allergens", "allergenic", "sensitization"]
+      },
+      "preservatives": {
+        "description": "Preservative system and content",
+        "required": false,
+        "keywords": ["preservatives", "antimicrobial", "parabens"]
+      }
+    },
+    "regulatory": {
+      "eu_compliance": {
+        "description": "EU Cosmetics Regulation 1223/2009 compliance",
+        "required": true,
+        "keywords": ["EU 1223/2009", "European", "cosmetics regulation"]
+      },
+      "fda_compliance": {
+        "description": "FDA cosmetics compliance",
+        "required": false,
+        "keywords": ["FDA", "GRAS", "cosmetics", "United States"]
+      }
+    }
+  },
+  "examples": [
+    {
+      "text": "This cosmetic ingredient complies with EU Regulation 1223/2009. No known allergens present.",
+      "extractions": [
+        {
+          "extraction_class": "requirement",
+          "extraction_text": "EU Regulation 1223/2009",
+          "attributes": {
+            "name": "EU Compliance",
+            "status": "present",
+            "value": "1223/2009",
+            "evidence": "complies with EU Regulation 1223/2009"
+          }
+        }
+      ]
+    }
+  ],
+  "output_format": {
+    "type": "structured",
+    "extraction_class": "requirement",
+    "attributes_schema": {
+      "name": "string",
+      "status": "present|not_found",
+      "value": "string|null",
+      "evidence": "string"
+    }
+  }
+}
